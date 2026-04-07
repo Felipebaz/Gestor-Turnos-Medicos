@@ -14,7 +14,13 @@ public class TurnoUrgencia : Turno
 
     public override decimal CalcularCostoTurno()
     {
-        return base.CalcularCostoTurno() * 1.5m;
+        decimal total = base.CalcularCostoTurno() * 1.5m;
+        if (Paciente.ObraSocial != null)
+        {
+            total *= 0.85m;
+        }
+
+        return total;
     }
 
     

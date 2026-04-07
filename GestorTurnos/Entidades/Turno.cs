@@ -14,10 +14,16 @@ public class Turno
         Paciente = paciente;
         FechaHora = fechaHora;
     }
-    
+
 
     public virtual decimal CalcularCostoTurno()
     {
-        return Medico.ValorConsultaBase;
+        decimal total = Medico.ValorConsultaBase;
+        if (Paciente.ObraSocial != null)
+        {
+            total *= 0.85m;
+        }
+        return total;
     }
+    
 }
