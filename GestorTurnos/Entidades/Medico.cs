@@ -2,11 +2,11 @@ namespace GestorTurnos.Entidades;
 
 public class Medico
 {
-    private string Nombre  { get; set; }
-    private string Especialidad { get; set; }
-    private float ValorConsultaBase { get; set; }
+    public string Nombre  { get; private set; }
+    public string Especialidad { get; private set; }
+    public decimal ValorConsultaBase { get; private set; }
 
-    public Medico(string nombre, string especialidad, float valorConsultaBase)
+    public Medico(string nombre, string especialidad, decimal valorConsultaBase)
     {
         Nombre = nombre;
         Especialidad = especialidad;

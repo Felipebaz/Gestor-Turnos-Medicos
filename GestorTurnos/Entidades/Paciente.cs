@@ -2,10 +2,10 @@ namespace GestorTurnos.Entidades;
 
 public class Paciente
 {
-    private string Nombre { get; set; }
-    private string Apellido { get; set; }
-    private DateTime FechaNacimiento { get; set; }
-    private string? ObraSocial { get; set; } // ? es porque puede ser NULL
+    public string Nombre { get; private set; }
+    public string Apellido { get; private set; }
+    public DateTime FechaNacimiento { get; private set; }
+    public string? ObraSocial { get; private set; } // ? es porque puede ser NULL
 
     public Paciente(string nombre, string apellido, DateTime fechaNacimiento)
     {

@@ -1,9 +1,23 @@
 namespace GestorTurnos.Entidades;
 using System;
 
+
 public class Turno
 {
-    private string Medico { get; set; }
-    private string Paciente { get; set; }
-    private DateTime FechaHora { get; set; }
+    public Medico Medico { get; private set; }
+    public Paciente Paciente { get; private set; }
+    public DateTime FechaHora { get; private set; }
+
+    public Turno(Medico medico, Paciente paciente, DateTime fechaHora)
+    {
+        Medico = medico;
+        Paciente = paciente;
+        FechaHora = fechaHora;
+    }
+    
+
+    public decimal CalcularCostoTurno()
+    {
+        return Medico.ValorConsultaBase;
+    }
 }

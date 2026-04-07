@@ -1,6 +1,6 @@
 namespace GestorTurnos.Entidades;
 
-public class TurnoTele
+public class TurnoTele : Turno
 {
     
 }
