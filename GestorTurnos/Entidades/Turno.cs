@@ -16,7 +16,7 @@ public class Turno
     }
     
 
-    public decimal CalcularCostoTurno()
+    public virtual decimal CalcularCostoTurno()
     {
         return Medico.ValorConsultaBase;
     }
