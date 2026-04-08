@@ -12,14 +12,18 @@ public class TurnoUrgencia : Turno
         Prioridad = prioridad;
     }
 
+    public override string ObtenerTipo()
+    {
+        return "Urgencia";
+    }
+
     public override decimal CalcularCostoTurno()
     {
-        decimal total = base.CalcularCostoTurno() * 1.5m;
+        decimal total = Medico.ValorConsultaBase * 1.5m;
         if (Paciente.ObraSocial != null)
         {
             total *= 0.85m;
         }
-
         return total;
     }
 

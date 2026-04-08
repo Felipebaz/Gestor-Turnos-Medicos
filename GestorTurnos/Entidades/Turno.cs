@@ -16,6 +16,11 @@ public class Turno
     }
 
 
+    public virtual string ObtenerTipo()
+    {
+        return "General";
+    }
+
     public virtual decimal CalcularCostoTurno()
     {
         decimal total = Medico.ValorConsultaBase;
